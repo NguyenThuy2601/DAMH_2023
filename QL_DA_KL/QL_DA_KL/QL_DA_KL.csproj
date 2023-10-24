@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8E1EE5F-8010-4512-AD22-CC8921E80FBE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QL_DA_KL</RootNamespace>
+    <AssemblyName>QL_DA_KL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="customButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DocDSSVLamDAMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocDSSVLamDAMH.Designer.cs">
+      <DependentUpon>DocDSSVLamDAMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocDSSVLamKhoaLuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocDSSVLamKhoaLuan.Designer.cs">
+      <DependentUpon>DocDSSVLamKhoaLuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocDSSVTuGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocDSSVTuGiangVien.Designer.cs">
+      <DependentUpon>DocDSSVTuGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocLichBieuGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocLichBieuGV.Designer.cs">
+      <DependentUpon>DocLichBieuGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuiEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuiEmail.Designer.cs">
+      <DependentUpon>GuiEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanCongGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanCongGV.Designer.cs">
+      <DependentUpon>PhanCongGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QLBuoiBaoVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLBuoiBaoVe.Designer.cs">
+      <DependentUpon>QLBuoiBaoVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLGV.Designer.cs">
+      <DependentUpon>QLGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNhomSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNhomSV.Designer.cs">
+      <DependentUpon>QLNhomSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLSV.Designer.cs">
+      <DependentUpon>QLSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyHoiDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyHoiDong.Designer.cs">
+      <DependentUpon>QuanLyHoiDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uploadFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uploadFile.Designer.cs">
+      <DependentUpon>uploadFile.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DocDSSVLamDAMH.resx">
+      <DependentUpon>DocDSSVLamDAMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocDSSVLamKhoaLuan.resx">
+      <DependentUpon>DocDSSVLamKhoaLuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocDSSVTuGiangVien.resx">
+      <DependentUpon>DocDSSVTuGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocLichBieuGV.resx">
+      <DependentUpon>DocLichBieuGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuiEmail.resx">
+      <DependentUpon>GuiEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanCongGV.resx">
+      <DependentUpon>PhanCongGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLBuoiBaoVe.resx">
+      <DependentUpon>QLBuoiBaoVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLGV.resx">
+      <DependentUpon>QLGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNhomSV.resx">
+      <DependentUpon>QLNhomSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLSV.resx">
+      <DependentUpon>QLSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyHoiDong.resx">
+      <DependentUpon>QuanLyHoiDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uploadFile.resx">
+      <DependentUpon>uploadFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QL_DA_KL.BUS\QL_DA_KL.BUS.csproj">
+      <Project>{8e26395b-9e89-436b-85fe-d17aad7e4525}</Project>
+      <Name>QL_DA_KL.BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QL_DA_KL.DTO\QL_DA_KL.DTO.csproj">
+      <Project>{d18e7523-ed73-49f2-aee5-ed9f8b5daaa8}</Project>
+      <Name>QL_DA_KL.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\leftAlign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\leftAlignIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\leftAlignIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\centerAlignIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\rightAlignIcon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
